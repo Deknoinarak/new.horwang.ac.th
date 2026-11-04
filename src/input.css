@@ -16,11 +16,14 @@
 
 @font-face {
   font-family: "Noto Sans Thai";
-  src: url("../../assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf") format("ttf-variations");
+  src: url("../../assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf") format('truetype-variations');
   font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Noto Sans Thai";
   src: url("../../assets/fonts/NotoSansThai-Regular.ttf");
   font-weight: normal;
@@ -39,13 +42,13 @@
   src: url("../../assets/fonts/NotoSansThai-Light.ttf");
   font-weight: light;
   font-style: normal;
-}
+} */
 
 @theme {
-  --color-hwbrown: #603D20;
-  --color-hwyellow: #F9DA1D;
-  --font-display: "Noto Sans Thai", sans-serif; 
-  --font-body: "Bai Jamjuree", sans-serif; 
+  --color-hwbrown: #603d20;
+  --color-hwyellow: #f9da1d;
+  --font-display: "Noto Sans Thai", sans-serif;
+  --font-body: "Bai Jamjuree", sans-serif;
 }
 
 @utility container {

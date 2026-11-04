@@ -10,7 +10,6 @@
       "Courier New", monospace;
     --color-yellow-800: oklch(47.6% 0.114 61.907);
     --color-yellow-950: oklch(28.6% 0.066 53.813);
-    --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -20,11 +19,12 @@
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-light: 300;
+    --font-weight-normal: 400;
     --font-weight-bold: 700;
     --leading-tight: 1.25;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-hwbrown: #603D20;
+    --color-hwbrown: #603d20;
     --font-display: "Noto Sans Thai", sans-serif;
   }
 }
@@ -200,17 +200,8 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-12 {
     height: calc(var(--spacing) * 12);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .items-center {
     align-items: center;
@@ -225,34 +216,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-hwbrown {
-    border-color: var(--color-hwbrown);
-  }
-  .border-hwbrown\/25 {
-    border-color: color-mix(in srgb, #603D20 25%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-hwbrown) 25%, transparent);
-    }
-  }
   .border-hwbrown\/50 {
-    border-color: color-mix(in srgb, #603D20 50%, transparent);
+    border-color: color-mix(in srgb, #603d20 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-hwbrown) 50%, transparent);
-    }
-  }
-  .border-hwbrown\/75 {
-    border-color: color-mix(in srgb, #603D20 75%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-hwbrown) 75%, transparent);
-    }
-  }
-  .border-slate-800 {
-    border-color: var(--color-slate-800);
-  }
-  .border-slate-800\/25 {
-    border-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 25%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-slate-800) 25%, transparent);
     }
   }
   .bg-hwbrown {
@@ -291,6 +258,10 @@
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
   }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
   .text-yellow-800 {
     color: var(--color-yellow-800);
   }
@@ -299,10 +270,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 @font-face {
@@ -319,26 +286,11 @@
 }
 @font-face {
   font-family: "Noto Sans Thai";
-  src: url("../../assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf") format("ttf-variations");
+  src: url("../../assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf") format('truetype-variations');
   font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans Thai";
-  src: url("../../assets/fonts/NotoSansThai-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans Thai";
-  src: url("../../assets/fonts/NotoSansThai-Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Noto Sans Thai";
-  src: url("../../assets/fonts/NotoSansThai-Light.ttf");
-  font-weight: light;
-  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -353,18 +305,12 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
