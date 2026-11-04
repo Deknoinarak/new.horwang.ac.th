@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("../../assets/fonts/BaiJamjuree-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url("../../assets/fonts/BaiJamjuree-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../../assets/fonts/NotoSansThai-VariableFont_wdth,wght.ttf") format("ttf-variations");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../../assets/fonts/NotoSansThai-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../../assets/fonts/NotoSansThai-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../../assets/fonts/NotoSansThai-Light.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+
+@theme {
+  --color-hwbrown: #603D20;
+  --color-hwyellow: #F9DA1D;
+  --font-display: "Noto Sans Thai", sans-serif; 
+  --font-body: "Bai Jamjuree", sans-serif; 
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
